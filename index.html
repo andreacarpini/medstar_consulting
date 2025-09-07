@@ -31,10 +31,10 @@
         
         body {
             opacity: 0;
-    animation: fadeIn 1.5s ease-in forwards;
+            animation: fadeIn .35s ease-in forwards;
             color: var(--dark);
             line-height: 1.3;
-            background-color: #f5f7fa;
+            background-color: white;
         }
         @keyframes fadeIn {
     from { opacity: 0; }
@@ -162,7 +162,6 @@ nav ul {
         
         .hero h1 {
             font-size: 4rem;
-            margin-bottom: 20px;
             line-height: 1.2;
         }
         
@@ -207,7 +206,7 @@ nav ul {
         }
         
         .benefit-card {
-            flex: 0 0 calc(33% - 30px);
+            flex: 0 0 calc(25% - 30px);
             text-align: left;
             color: var(--gray);
         }
@@ -274,11 +273,11 @@ nav ul {
         
         /* Stagger the animation delays for each step */
         .process-step:nth-child(1) { transition-delay: 0.1s; }
-        .process-step:nth-child(2) { transition-delay: 0.2s; }
-        .process-step:nth-child(3) { transition-delay: 0.3s; }
-        .process-step:nth-child(4) { transition-delay: 0.4s; }
-        .process-step:nth-child(5) { transition-delay: 0.5s; }
-        .process-step:nth-child(6) { transition-delay: 0.6s; }
+        .process-step:nth-child(2) { transition-delay: 0.1s; }
+        .process-step:nth-child(3) { transition-delay: 0.1s; }
+        .process-step:nth-child(4) { transition-delay: 0.1s; }
+        .process-step:nth-child(5) { transition-delay: 0.1s; }
+        .process-step:nth-child(6) { transition-delay: 0.1s; }
 
 
 
@@ -752,7 +751,7 @@ nav ul {
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     padding: 0 20px;
     max-height: 0;
-    transition: 0.7s ease-in-out;
+    transition: 0.35s ease-in-out;
 }
 
 .treatment.active .treatment-content {
@@ -1145,8 +1144,7 @@ nav ul {
 
   /* 1. Apply the gradient as a background */
   /* This creates a gradient from the requested #E30A17 to a brighter red */
-background:linear-gradient(135deg, #E30A17 0%, #FF5733 100%);  
-  /* 2. Clip the background to the shape of the text */
+background: linear-gradient(135deg, #E30A17 0%, #FF5733 50%, #FF8C42 100%);  /* 2. Clip the background to the shape of the text */
   -webkit-background-clip: text; /* For Safari and older Chrome/Edge */
   background-clip: text;
 
@@ -1186,7 +1184,7 @@ max-width:900px;margin:0 auto;padding: 0;
     padding-bottom: 60px;
     display:flex;flex-direction:column;align-items:center;justify-content:center;
     color:#fff;text-align:center;
-    transition:opacity 0.5s ease;
+    transition:opacity 0.35s ease;
 }
 
 .why-turkey-bg::after {            /* we reuse the pseudo-element as the bar */
@@ -1433,7 +1431,6 @@ max-width:900px;margin:0 auto;padding: 0;
                     <li><a href="#providers">Providers & Physicians</a></li>
                     <li><a href="#treatments">Treatments</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
         </div>
@@ -1446,9 +1443,6 @@ max-width:900px;margin:0 auto;padding: 0;
             <h1>Your bridge to world-class medical care in <span class="gradient-text">Turkey</span>, with MedStar Consulting.</h1>
             
         </div>
-                  <div style="text-align:center;margin-top:40px;">
-              <button class="btn">About us</button>
-          </div>
 
 
     </section>
@@ -1468,20 +1462,29 @@ max-width:900px;margin:0 auto;padding: 0;
                   <h3>Significant cost savings.</h3>
                   <p>High-quality medical treatments at 50-85% lower costs compared to the US, without compromising on quality or safety.</p>
               </div>
+                                          <div class="benefit-card">
+                  <h3>Top hospitals.</h3>
+                  <p>Turkish hospitals consistently achieve JCI accreditation (the gold standard in global healthcare), and many physicians have trained at prestigious institutions across Europe and the USA.</p>
+              </div>
+
               <div class="benefit-card">
-                  <h3>Top medical professionals.</h3>
+                  <h3>Top physicians.</h3>
                   <p>Access to internationally-trained, English-speaking physicians and surgeons with exceptional credentials and experience.</p>
               </div>
               <div class="benefit-card">
                   <h3>No waiting times.</h3>
                   <p>Immediate access to treatments without the long waiting periods often experienced in the US healthcare system.</p>
               </div>
+
           </div>
 
       </div>
     
       <button class="why-turkey-toggle" aria-label="Toggle"></button>
-  </div>
+    </div>
+
+
+
 </section>
 
     <!-- Process Section -->
@@ -1837,12 +1840,1140 @@ max-width:900px;margin:0 auto;padding: 0;
                     </div>
             </div>
 
+            <div class="treatment">
+    <div class="treatment-header">
+        <h3>Organ Transplantation</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="treatment-content">
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Treatment</th>
+                    <th>USA</th>
+                    <th>Turkey</th>
+                    <th>Savings</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kidney Transplant</td>
+                    <td>$400,000 - $600,000+</td>
+                    <td>$70,000 - $100,000</td>
+                    <td>75-85%</td>
+                    <td>Includes donor screening, surgery, hospital stay, and initial immunosuppressants.</td>
+                </tr>
+                <tr>
+                    <td>Liver Transplant</td>
+                    <td>$800,000 - $1,200,000+</td>
+                    <td>$150,000 - $250,000</td>
+                    <td>75-85%</td>
+                    <td>Includes organ procurement, complex surgery, and ICU recovery.</td>
+                </tr>
+                <tr>
+                    <td>Heart Transplant</td>
+                    <td>$1,200,000 - $1,700,000+</td>
+                    <td>$200,000 - $300,000</td>
+                    <td>80-85%</td>
+                    <td>Includes donor matching, surgery, and intensive post-op monitoring.</td>
+                </tr>
+                <tr>
+                    <td>Lung Transplant</td>
+                    <td>$1,000,000 - $1,500,000+</td>
+                    <td>$180,000 - $280,000</td>
+                    <td>75-85%</td>
+                    <td>Single or double lung transplant with specialized surgical team.</td>
+                </tr>
+                <tr>
+                    <td>Pancreas Transplant</td>
+                    <td>$350,000 - $500,000+</td>
+                    <td>$80,000 - $120,000</td>
+                    <td>75-80%</td>
+                    <td>Often performed simultaneously with kidney transplant for diabetics.</td>
+                </tr>
+                <tr>
+                    <td>Intestinal Transplant</td>
+                    <td>$1,100,000 - $1,600,000+</td>
+                    <td>$220,000 - $320,000</td>
+                    <td>75-80%</td>
+                    <td>Highly complex procedure for patients with intestinal failure.</td>
+                </tr>
+                <tr>
+                    <td>Multi-Organ Transplant</td>
+                    <td>$1,500,000 - $2,500,000+</td>
+                    <td>$300,000 - $500,000</td>
+                    <td>75-85%</td>
+                    <td>For combined organ failures (e.g., heart-lung, liver-kidney).</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 
+<div class="treatment">
+    <div class="treatment-header">
+        <h3>IVF and Donation Treatments</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="treatment-content">
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Treatment</th>
+                    <th>USA</th>
+                    <th>Turkey</th>
+                    <th>Savings</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Standard IVF Cycle</td>
+                    <td>$12,000 - $20,000+</td>
+                    <td>$3,000 - $5,000</td>
+                    <td>70-75%</td>
+                    <td>Includes monitoring, egg retrieval, fertilization, and embryo transfer.</td>
+                </tr>
+                <tr>
+                    <td>IVF with ICSI</td>
+                    <td>$15,000 - $25,000+</td>
+                    <td>$4,000 - $6,500</td>
+                    <td>70-75%</td>
+                    <td>Intracytoplasmic sperm injection for male factor infertility.</td>
+                </tr>
+                <tr>
+                    <td>Egg Donation Cycle (Recipient)</td>
+                    <td>$25,000 - $40,000+</td>
+                    <td>$7,000 - $12,000</td>
+                    <td>70-75%</td>
+                    <td>Includes donor screening, compensation, and embryo transfer.</td>
+                </tr>
+                <tr>
+                    <td>Embryo Donation</td>
+                    <td>$8,000 - $12,000+</td>
+                    <td>$3,000 - $5,000</td>
+                    <td>60-65%</td>
+                    <td>Using donated embryos from previous IVF patients.</td>
+                </tr>
+                <tr>
+                    <td>Frozen Embryo Transfer (FET)</td>
+                    <td>$5,000 - $8,000+</td>
+                    <td>$1,500 - $2,500</td>
+                    <td>65-70%</td>
+                    <td>Thawing and transferring previously frozen embryos.</td>
+                </tr>
+                <tr>
+                    <td>PGT Testing (Preimplantation Genetic Testing)</td>
+                    <td>$5,000 - $8,000+</td>
+                    <td>$1,500 - $2,500</td>
+                    <td>65-70%</td>
+                    <td>Genetic screening of embryos for abnormalities.</td>
+                </tr>
+                <tr>
+                    <td>Fertility Preservation (Egg Freezing)</td>
+                    <td>$10,000 - $15,000+</td>
+                    <td>$2,500 - $4,000</td>
+                    <td>70-75%</td>
+                    <td>Includes medications, monitoring, egg retrieval and freezing.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 
-            <div style="text-align: center; margin-top: 40px;">
-                                    <button class="btn">View all treatments</button>
+<div class="treatment">
+    <div class="treatment-header">
+        <h3>Orthopedics and Sports Injury</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="treatment-content">
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Treatment</th>
+                    <th>USA</th>
+                    <th>Turkey</th>
+                    <th>Savings</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ACL Reconstruction</td>
+                    <td>$25,000 - $50,000+</td>
+                    <td>$6,000 - $10,000</td>
+                    <td>75-80%</td>
+                    <td>Includes surgery, anesthesia, and physical therapy planning.</td>
+                </tr>
+                <tr>
+                    <td>Total Knee Replacement</td>
+                    <td>$40,000 - $80,000+</td>
+                    <td>$10,000 - $15,000</td>
+                    <td>70-80%</td>
+                    <td>Includes implant, surgery, and 5-7 day hospital stay.</td>
+                </tr>
+                <tr>
+                    <td>Total Hip Replacement</td>
+                    <td>$45,000 - $90,000+</td>
+                    <td>$11,000 - $16,000</td>
+                    <td>70-80%</td>
+                    <td>Advanced techniques including anterior approach available.</td>
+                </tr>
+                <tr>
+                    <td>Rotator Cuff Repair</td>
+                    <td>$20,000 - $35,000+</td>
+                    <td>$5,000 - $8,000</td>
+                    <td>70-75%</td>
+                    <td>Arthroscopic procedure with minimal invasion.</td>
+                </tr>
+                <tr>
+                    <td>Meniscus Repair</td>
+                    <td>$15,000 - $25,000+</td>
+                    <td>$4,000 - $6,500</td>
+                    <td>70-75%</td>
+                    <td>Arthroscopic surgery with quick recovery time.</td>
+                </tr>
+                <tr>
+                    <td>Spinal Fusion (Single Level)</td>
+                    <td>$80,000 - $150,000+</td>
+                    <td>$18,000 - $28,000</td>
+                    <td>75-80%</td>
+                    <td>For degenerative disc disease or spinal instability.</td>
+                </tr>
+                <tr>
+                    <td>Shoulder Replacement</td>
+                    <td>$35,000 - $60,000+</td>
+                    <td>$9,000 - $14,000</td>
+                    <td>70-75%</td>
+                    <td>Partial or total shoulder replacement procedures.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 
-            </div>
+<div class="treatment">
+    <div class="treatment-header">
+        <h3>Spine Surgery</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="treatment-content">
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Treatment</th>
+                    <th>USA</th>
+                    <th>Turkey</th>
+                    <th>Savings</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Spinal Fusion (Single Level)</td>
+                    <td>$80,000 - $150,000+</td>
+                    <td>$18,000 - $28,000</td>
+                    <td>75-80%</td>
+                    <td>Includes implants, surgery, and hospital stay for degenerative disc disease.</td>
+                </tr>
+                <tr>
+                    <td>Microdiscectomy</td>
+                    <td>$30,000 - $50,000+</td>
+                    <td>$7,000 - $12,000</td>
+                    <td>75-80%</td>
+                    <td>Minimally invasive removal of herniated disc material.</td>
+                </tr>
+                <tr>
+                    <td>Laminectomy</td>
+                    <td>$50,000 - $90,000+</td>
+                    <td>$12,000 - $20,000</td>
+                    <td>75-80%</td>
+                    <td>Decompression surgery for spinal stenosis.</td>
+                </tr>
+                <tr>
+                    <td>Artificial Disc Replacement</td>
+                    <td>$70,000 - $130,000+</td>
+                    <td>$20,000 - $35,000</td>
+                    <td>70-75%</td>
+                    <td>Motion-preserving alternative to spinal fusion.</td>
+                </tr>
+                <tr>
+                    <td>Spinal Cord Stimulator Implantation</td>
+                    <td>$60,000 - $100,000+</td>
+                    <td>$15,000 - $25,000</td>
+                    <td>75-80%</td>
+                    <td>For chronic pain management, includes device and surgery.</td>
+                </tr>
+                <tr>
+                    <td>Kyphoplasty/Vertebroplasty</td>
+                    <td>$20,000 - $35,000+</td>
+                    <td>$6,000 - $10,000</td>
+                    <td>70-75%</td>
+                    <td>Minimally invasive treatment for spinal compression fractures.</td>
+                </tr>
+                <tr>
+                    <td>Complex Spinal Reconstruction (Scoliosis)</td>
+                    <td>$150,000 - $300,000+</td>
+                    <td>$40,000 - $70,000</td>
+                    <td>75-80%</td>
+                    <td>Multi-level correction for spinal deformities.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="treatment">
+    <div class="treatment-header">
+        <h3>Pediatric Urology and Surgery</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="treatment-content">
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Treatment</th>
+                    <th>USA</th>
+                    <th>Turkey</th>
+                    <th>Savings</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hypospadias Repair</td>
+                    <td>$25,000 - $45,000+</td>
+                    <td>$6,000 - $10,000</td>
+                    <td>75-80%</td>
+                    <td>Corrective surgery for urethral opening abnormality, includes hospital stay.</td>
+                </tr>
+                <tr>
+                    <td>Undescended Testicle (Orchiopexy)</td>
+                    <td>$15,000 - $30,000+</td>
+                    <td>$4,000 - $7,000</td>
+                    <td>70-75%</td>
+                    <td>Surgical procedure to move undescended testicle to proper position.</td>
+                </tr>
+                <tr>
+                    <td>Vesicoureteral Reflux (VUR) Surgery</td>
+                    <td>$35,000 - $60,000+</td>
+                    <td>$8,000 - $14,000</td>
+                    <td>75-80%</td>
+                    <td>Corrects abnormal urine flow from bladder to kidneys.</td>
+                </tr>
+                <tr>
+                    <td>Circumcision (Surgical)</td>
+                    <td>$5,000 - $10,000+</td>
+                    <td>$1,500 - $2,500</td>
+                    <td>70-75%</td>
+                    <td>Performed by pediatric urologist for medical reasons.</td>
+                </tr>
+                <tr>
+                    <td>Hernia/Hydrocele Repair</td>
+                    <td>$12,000 - $25,000+</td>
+                    <td>$3,500 - $6,000</td>
+                    <td>70-75%</td>
+                    <td>Corrects inguinal hernia or fluid accumulation in scrotum.</td>
+                </tr>
+                <tr>
+                    <td>Pyeloplasty (UPJ Obstruction Repair)</td>
+                    <td>$40,000 - $70,000+</td>
+                    <td>$9,000 - $16,000</td>
+                    <td>75-80%</td>
+                    <td>Corrects blockage between kidney and ureter, often minimally invasive.</td>
+                </tr>
+                <tr>
+                    <td>Bladder Exstrophy Repair</td>
+                    <td>$100,000 - $200,000+</td>
+                    <td>$25,000 - $45,000</td>
+                    <td>75-80%</td>
+                    <td>Complex reconstruction for congenital bladder abnormality.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="treatment">
+    <div class="treatment-header">
+        <h3>Brain and Nerve Surgery</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="treatment-content">
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Treatment</th>
+                    <th>USA</th>
+                    <th>Turkey</th>
+                    <th>Savings</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Brain Tumor Resection (Craniotomy)</td>
+                    <td>$150,000 - $250,000+</td>
+                    <td>$35,000 - $60,000</td>
+                    <td>75-80%</td>
+                    <td>Includes advanced imaging, neuronavigation, and ICU stay.</td>
+                </tr>
+                <tr>
+                    <td>Deep Brain Stimulation (DBS)</td>
+                    <td>$100,000 - $150,000+</td>
+                    <td>$30,000 - $45,000</td>
+                    <td>70-75%</td>
+                    <td>For Parkinson's disease, includes device implantation.</td>
+                </tr>
+                <tr>
+                    <td>Spinal Cord Tumor Removal</td>
+                    <td>$120,000 - $200,000+</td>
+                    <td>$28,000 - $45,000</td>
+                    <td>75-80%</td>
+                    <td>Microsurgical technique with intraoperative monitoring.</td>
+                </tr>
+                <tr>
+                    <td>Epilepsy Surgery (Temporal Lobectomy)</td>
+                    <td>$130,000 - $180,000+</td>
+                    <td>$30,000 - $50,000</td>
+                    <td>75-80%</td>
+                    <td>Includes extensive pre-surgical monitoring and mapping.</td>
+                </tr>
+                <tr>
+                    <td>Microvascular Decompression (MVD)</td>
+                    <td>$80,000 - $120,000+</td>
+                    <td>$20,000 - $35,000</td>
+                    <td>75-80%</td>
+                    <td>For trigeminal neuralgia or hemifacial spasm.</td>
+                </tr>
+                <tr>
+                    <td>Peripheral Nerve Surgery</td>
+                    <td>$40,000 - $70,000+</td>
+                    <td>$10,000 - $18,000</td>
+                    <td>75-80%</td>
+                    <td>For nerve injuries, entrapments, or tumors.</td>
+                </tr>
+                <tr>
+                    <td>Aneurysm Clipping/Coiling</td>
+                    <td>$120,000 - $200,000+</td>
+                    <td>$30,000 - $50,000</td>
+                    <td>75-80%</td>
+                    <td>Endovascular or surgical treatment for brain aneurysms.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="treatment">
+    <div class="treatment-header">
+        <h3>Comprehensive Health Check-Up</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="treatment-content">
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Package</th>
+                    <th>USA</th>
+                    <th>Turkey</th>
+                    <th>Savings</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic Executive Check-Up</td>
+                    <td>$1,500 - $3,000+</td>
+                    <td>$400 - $800</td>
+                    <td>70-75%</td>
+                    <td>Includes blood tests, ECG, chest X-ray, and basic physician consultation.</td>
+                </tr>
+                <tr>
+                    <td>Comprehensive Executive Check-Up</td>
+                    <td>$3,000 - $6,000+</td>
+                    <td>$800 - $1,500</td>
+                    <td>70-75%</td>
+                    <td>Extended tests including stress test, abdominal ultrasound, and specialist consultations.</td>
+                </tr>
+                <tr>
+                    <td>Cardiac Health Package</td>
+                    <td>$2,500 - $5,000+</td>
+                    <td>$600 - $1,200</td>
+                    <td>75-80%</td>
+                    <td>Includes echocardiogram, cardiac CT, lipid profile, and cardiologist consultation.</td>
+                </tr>
+                <tr>
+                    <td>Cancer Screening Package</td>
+                    <td>$4,000 - $8,000+</td>
+                    <td>$1,000 - $2,000</td>
+                    <td>75-80%</td>
+                    <td>Comprehensive screening including tumor markers, low-dose CT, mammography, and endoscopies.</td>
+                </tr>
+                <tr>
+                    <td>Full Body MRI Scan</td>
+                    <td>$2,500 - $4,500+</td>
+                    <td>$700 - $1,200</td>
+                    <td>70-75%</td>
+                    <td>Non-invasive detailed imaging of entire body for early detection.</td>
+                </tr>
+                <tr>
+                    <td>Genetic Testing & Risk Assessment</td>
+                    <td>$5,000 - $10,000+</td>
+                    <td>$1,500 - $3,000</td>
+                    <td>70-75%</td>
+                    <td>Comprehensive DNA analysis for hereditary disease risk and personalized medicine.</td>
+                </tr>
+                <tr>
+                    <td>Luxury Wellness Retreat (3 days)</td>
+                    <td>$8,000 - $15,000+</td>
+                    <td>$2,500 - $4,500</td>
+                    <td>65-70%</td>
+                    <td>Includes all tests, accommodations, nutrition planning, and wellness therapies.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="treatment">
+    <div class="treatment-header">
+        <h3>Physical Rehabilitation</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="treatment-content">
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Treatment</th>
+                    <th>USA</th>
+                    <th>Turkey</th>
+                    <th>Savings</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Post-Stroke Rehabilitation (4 weeks)</td>
+                    <td>$40,000 - $80,000+</td>
+                    <td>$8,000 - $15,000</td>
+                    <td>75-80%</td>
+                    <td>Includes physical, occupational, and speech therapy sessions.</td>
+                </tr>
+                <tr>
+                    <td>Orthopedic Rehabilitation (4 weeks)</td>
+                    <td>$25,000 - $50,000+</td>
+                    <td>$6,000 - $12,000</td>
+                    <td>75-80%</td>
+                    <td>Post-surgery recovery with personalized exercise programs.</td>
+                </tr>
+                <tr>
+                    <td>Spinal Cord Injury Program (8 weeks)</td>
+                    <td>$100,000 - $200,000+</td>
+                    <td>$25,000 - $45,000</td>
+                    <td>75-80%</td>
+                    <td>Comprehensive program including hydrotherapy and adaptive equipment training.</td>
+                </tr>
+                <tr>
+                    <td>Neurological Rehabilitation (4 weeks)</td>
+                    <td>$35,000 - $70,000+</td>
+                    <td>$8,000 - $15,000</td>
+                    <td>75-80%</td>
+                    <td>For MS, Parkinson's, or other neurological conditions.</td>
+                </tr>
+                <tr>
+                    <td>Cardiac Rehabilitation (12 weeks)</td>
+                    <td>$15,000 - $30,000+</td>
+                    <td>$4,000 - $8,000</td>
+                    <td>70-75%</td>
+                    <td>Supervised exercise and education program post-heart attack or surgery.</td>
+                </tr>
+                <tr>
+                    <td>Pediatric Physical Therapy (12 sessions)</td>
+                    <td>$3,000 - $6,000+</td>
+                    <td>$800 - $1,500</td>
+                    <td>70-75%</td>
+                    <td>For developmental delays, cerebral palsy, or genetic disorders.</td>
+                </tr>
+                <tr>
+                    <td>Sports Injury Rehabilitation (12 sessions)</td>
+                    <td>$4,000 - $8,000+</td>
+                    <td>$1,000 - $2,000</td>
+                    <td>75-80%</td>
+                    <td>Return-to-sport program with sport-specific training.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="treatment">
+    <div class="treatment-header">
+        <h3>Addiction Treatments</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="treatment-content">
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Treatment</th>
+                    <th>USA</th>
+                    <th>Turkey</th>
+                    <th>Savings</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Inpatient Rehabilitation (30 days)</td>
+                    <td>$30,000 - $60,000+</td>
+                    <td>$7,000 - $12,000</td>
+                    <td>75-80%</td>
+                    <td>Residential program including detox, therapy, and aftercare planning.</td>
+                </tr>
+                <tr>
+                    <td>Medical Detoxification (7 days)</td>
+                    <td>$10,000 - $20,000+</td>
+                    <td>$2,500 - $4,500</td>
+                    <td>75-80%</td>
+                    <td>Medically supervised withdrawal management with 24/7 care.</td>
+                </tr>
+                <tr>
+                    <td>Outpatient Program (3 months)</td>
+                    <td>$15,000 - $30,000+</td>
+                    <td>$4,000 - $7,000</td>
+                    <td>70-75%</td>
+                    <td>Intensive outpatient treatment with therapy and group sessions.</td>
+                </tr>
+                <tr>
+                    <td>Dual Diagnosis Treatment (30 days)</td>
+                    <td>$35,000 - $70,000+</td>
+                    <td>$8,000 - $15,000</td>
+                    <td>75-80%</td>
+                    <td>For patients with both addiction and mental health disorders.</td>
+                </tr>
+                <tr>
+                    <td>Luxury Rehab Program (30 days)</td>
+                    <td>$60,000 - $100,000+</td>
+                    <td>$15,000 - $25,000</td>
+                    <td>75-80%</td>
+                    <td>Upscale facilities with alternative therapies and private accommodations.</td>
+                </tr>
+                <tr>
+                    <td>Medication-Assisted Treatment (12 months)</td>
+                    <td>$10,000 - $20,000+</td>
+                    <td>$3,000 - $6,000</td>
+                    <td>70-75%</td>
+                    <td>Includes medications like buprenorphine or naltrexone with counseling.</td>
+                </tr>
+                <tr>
+                    <td>Alcohol Addiction Program (30 days)</td>
+                    <td>$25,000 - $50,000+</td>
+                    <td>$6,000 - $11,000</td>
+                    <td>75-80%</td>
+                    <td>Specialized treatment for alcohol use disorder with medical support.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="treatment">
+    <div class="treatment-header">
+        <h3>Cardiovascular Surgery</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="treatment-content">
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Treatment</th>
+                    <th>USA</th>
+                    <th>Turkey</th>
+                    <th>Savings</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Coronary Artery Bypass Graft (CABG)</td>
+                    <td>$120,000 - $200,000+</td>
+                    <td>$25,000 - $40,000</td>
+                    <td>75-80%</td>
+                    <td>Single bypass surgery including hospital stay and rehabilitation.</td>
+                </tr>
+                <tr>
+                    <td>Heart Valve Replacement</td>
+                    <td>$170,000 - $300,000+</td>
+                    <td>$30,000 - $45,000</td>
+                    <td>80-85%</td>
+                    <td>Mechanical or biological valve replacement surgery.</td>
+                </tr>
+                <tr>
+                    <td>Transcatheter Aortic Valve Implantation (TAVI)</td>
+                    <td>$150,000 - $250,000+</td>
+                    <td>$35,000 - $55,000</td>
+                    <td>75-80%</td>
+                    <td>Minimally invasive valve replacement for high-risk patients.</td>
+                </tr>
+                <tr>
+                    <td>Atrial Septal Defect (ASD) Closure</td>
+                    <td>$80,000 - $150,000+</td>
+                    <td>$18,000 - $30,000</td>
+                    <td>75-80%</td>
+                    <td>Repair of congenital heart defect, surgical or catheter-based.</td>
+                </tr>
+                <tr>
+                    <td>Aortic Aneurysm Repair</td>
+                    <td>$130,000 - $220,000+</td>
+                    <td>$30,000 - $50,000</td>
+                    <td>75-80%</td>
+                    <td>Open surgery or endovascular stent graft placement.</td>
+                </tr>
+                <tr>
+                    <td>Left Ventricular Assist Device (LVAD) Implantation</td>
+                    <td>$400,000 - $800,000+</td>
+                    <td>$100,000 - $180,000</td>
+                    <td>70-80%</td>
+                    <td>Mechanical heart pump for advanced heart failure patients.</td>
+                </tr>
+                <tr>
+                    <td>Heart Transplant</td>
+                    <td>$1,200,000 - $1,700,000+</td>
+                    <td>$200,000 - $300,000</td>
+                    <td>80-85%</td>
+                    <td>Includes donor matching, surgery, and initial immunosuppressant therapy.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="treatment">
+    <div class="treatment-header">
+        <h3>ENT / Head and Neck Surgery</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="treatment-content">
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Treatment</th>
+                    <th>USA</th>
+                    <th>Turkey</th>
+                    <th>Savings</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cochlear Implant Surgery</td>
+                    <td>$80,000 - $120,000+</td>
+                    <td>$20,000 - $30,000</td>
+                    <td>75-80%</td>
+                    <td>Includes device, surgery, and initial activation/mapping sessions.</td>
+                </tr>
+                <tr>
+                    <td>Septoplasty with Rhinoplasty</td>
+                    <td>$15,000 - $30,000+</td>
+                    <td>$4,000 - $7,000</td>
+                    <td>70-75%</td>
+                    <td>Combined functional and cosmetic nasal surgery.</td>
+                </tr>
+                <tr>
+                    <td>Tonsillectomy and Adenoidectomy</td>
+                    <td>$10,000 - $20,000+</td>
+                    <td>$2,500 - $4,500</td>
+                    <td>75-80%</td>
+                    <td>Common procedure for chronic infections or sleep apnea.</td>
+                </tr>
+                <tr>
+                    <td>Thyroidectomy (Total)</td>
+                    <td>$25,000 - $45,000+</td>
+                    <td>$6,000 - $10,000</td>
+                    <td>75-80%</td>
+                    <td>Complete thyroid removal for cancer or severe dysfunction.</td>
+                </tr>
+                <tr>
+                    <td>Endoscopic Sinus Surgery</td>
+                    <td>$15,000 - $30,000+</td>
+                    <td>$4,000 - $7,000</td>
+                    <td>70-75%</td>
+                    <td>For chronic sinusitis or nasal polyps, minimally invasive approach.</td>
+                </tr>
+                <tr>
+                    <td>Head and Neck Cancer Surgery</td>
+                    <td>$70,000 - $150,000+</td>
+                    <td>$18,000 - $35,000</td>
+                    <td>75-80%</td>
+                    <td>Tumor resection with possible reconstruction, excluding oncology treatments.</td>
+                </tr>
+                <tr>
+                    <td>Sleep Apnea Surgery (UPPP)</td>
+                    <td>$20,000 - $35,000+</td>
+                    <td>$5,000 - $9,000</td>
+                    <td>75-80%</td>
+                    <td>Uvulopalatopharyngoplasty for obstructive sleep apnea.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="treatment">
+    <div class="treatment-header">
+        <h3>Pediatric Treatments and Surgeries</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="treatment-content">
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Treatment</th>
+                    <th>USA</th>
+                    <th>Turkey</th>
+                    <th>Savings</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pediatric Appendectomy</td>
+                    <td>$20,000 - $35,000+</td>
+                    <td>$5,000 - $8,000</td>
+                    <td>75-80%</td>
+                    <td>Emergency removal of appendix, often laparoscopic.</td>
+                </tr>
+                <tr>
+                    <td>Congenital Heart Defect Repair</td>
+                    <td>$150,000 - $300,000+</td>
+                    <td>$35,000 - $60,000</td>
+                    <td>75-80%</td>
+                    <td>Corrective surgery for conditions like VSD, ASD, or Tetralogy of Fallot.</td>
+                </tr>
+                <tr>
+                    <td>Pediatric Tonsillectomy/Adenoidectomy</td>
+                    <td>$12,000 - $25,000+</td>
+                    <td>$3,000 - $5,500</td>
+                    <td>75-80%</td>
+                    <td>For chronic infections or sleep-disordered breathing.</td>
+                </tr>
+                <tr>
+                    <td>Hernia/Hydrocele Repair (Pediatric)</td>
+                    <td>$15,000 - $25,000+</td>
+                    <td>$4,000 - $7,000</td>
+                    <td>70-75%</td>
+                    <td>Common procedure for inguinal hernia or fluid accumulation.</td>
+                </tr>
+                <tr>
+                    <td>Circumcision (Medical)</td>
+                    <td>$5,000 - $10,000+</td>
+                    <td>$1,500 - $2,500</td>
+                    <td>70-75%</td>
+                    <td>When performed for medical reasons by pediatric surgeon.</td>
+                </tr>
+                <tr>
+                    <td>Pyloric Stenosis Correction</td>
+                    <td>$18,000 - $30,000+</td>
+                    <td>$4,500 - $8,000</td>
+                    <td>75-80%</td>
+                    <td>Corrective surgery for infant stomach outlet obstruction.</td>
+                </tr>
+                <tr>
+                    <td>Pediatric Orthopedic Procedure (Fracture)</td>
+                    <td>$25,000 - $45,000+</td>
+                    <td>$6,000 - $11,000</td>
+                    <td>75-80%</td>
+                    <td>Fracture repair with casting or surgical intervention.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="treatment">
+    <div class="treatment-header">
+        <h3>Orthopedic / Knee Surgery</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="treatment-content">
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Treatment</th>
+                    <th>USA</th>
+                    <th>Turkey</th>
+                    <th>Savings</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Total Knee Replacement</td>
+                    <td>$40,000 - $80,000+</td>
+                    <td>$10,000 - $15,000</td>
+                    <td>70-80%</td>
+                    <td>Includes implant, surgery, and 5-7 day hospital stay with physical therapy.</td>
+                </tr>
+                <tr>
+                    <td>Partial Knee Replacement</td>
+                    <td>$30,000 - $60,000+</td>
+                    <td>$8,000 - $12,000</td>
+                    <td>70-75%</td>
+                    <td>Minimally invasive option when only one compartment is damaged.</td>
+                </tr>
+                <tr>
+                    <td>ACL Reconstruction</td>
+                    <td>$25,000 - $50,000+</td>
+                    <td>$6,000 - $10,000</td>
+                    <td>75-80%</td>
+                    <td>Arthroscopic procedure using autograft or allograft tissue.</td>
+                </tr>
+                <tr>
+                    <td>Meniscus Repair</td>
+                    <td>$15,000 - $25,000+</td>
+                    <td>$4,000 - $6,500</td>
+                    <td>70-75%</td>
+                    <td>Arthroscopic surgery to repair torn cartilage.</td>
+                </tr>
+                <tr>
+                    <td>Knee Arthroscopy</td>
+                    <td>$12,000 - $20,000+</td>
+                    <td>$3,500 - $6,000</td>
+                    <td>70-75%</td>
+                    <td>Diagnostic and therapeutic procedure for various knee conditions.</td>
+                </tr>
+                <tr>
+                    <td>Cartilage Restoration Procedures</td>
+                    <td>$20,000 - $40,000+</td>
+                    <td>$6,000 - $10,000</td>
+                    <td>70-75%</td>
+                    <td>Microfracture, OATS, or MACI procedures for cartilage defects.</td>
+                </tr>
+                <tr>
+                    <td>Knee Osteotomy</td>
+                    <td>$35,000 - $60,000+</td>
+                    <td>$9,000 - $15,000</td>
+                    <td>70-75%</td>
+                    <td>Realignment procedure to shift weight from damaged area of knee.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="treatment">
+    <div class="treatment-header">
+        <h3>Obesity / Bariatric Surgery</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="treatment-content">
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Treatment</th>
+                    <th>USA</th>
+                    <th>Turkey</th>
+                    <th>Savings</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Gastric Sleeve Surgery</td>
+                    <td>$15,000 - $25,000+</td>
+                    <td>$4,500 - $7,500</td>
+                    <td>70-75%</td>
+                    <td>Laparoscopic sleeve gastrectomy, includes 3-4 day hospital stay.</td>
+                </tr>
+                <tr>
+                    <td>Gastric Bypass (Roux-en-Y)</td>
+                    <td>$20,000 - $35,000+</td>
+                    <td>$6,000 - $9,000</td>
+                    <td>70-75%</td>
+                    <td>Gold standard procedure with proven long-term results.</td>
+                </tr>
+                <tr>
+                    <td>Gastric Balloon Placement</td>
+                    <td>$8,000 - $12,000+</td>
+                    <td>$3,000 - $5,000</td>
+                    <td>60-65%</td>
+                    <td>Non-surgical temporary weight loss solution (6 months).</td>
+                </tr>
+                <tr>
+                    <td>Lap-Band Adjustable Gastric Banding</td>
+                    <td>$14,000 - $22,000+</td>
+                    <td>$5,000 - $8,000</td>
+                    <td>60-65%</td>
+                    <td>Less invasive but requires regular adjustments.</td>
+                </tr>
+                <tr>
+                    <td>Biliopancreatic Diversion with Duodenal Switch</td>
+                    <td>$25,000 - $40,000+</td>
+                    <td>$8,000 - $12,000</td>
+                    <td>65-70%</td>
+                    <td>Complex procedure for patients with very high BMI.</td>
+                </tr>
+                <tr>
+                    <td>Revision Bariatric Surgery</td>
+                    <td>$30,000 - $50,000+</td>
+                    <td>$10,000 - $16,000</td>
+                    <td>65-70%</td>
+                    <td>Corrective surgery for failed primary bariatric procedures.</td>
+                </tr>
+                <tr>
+                    <td>Body Contouring After Major Weight Loss</td>
+                    <td>$15,000 - $30,000+</td>
+                    <td>$6,000 - $10,000</td>
+                    <td>60-65%</td>
+                    <td>Includes abdominoplasty, arm lift, thigh lift, or breast lift.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="treatment">
+    <div class="treatment-header">
+        <h3>Eye / LASIK Care</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="treatment-content">
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Treatment</th>
+                    <th>USA</th>
+                    <th>Turkey</th>
+                    <th>Savings</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>LASIK (Both Eyes)</td>
+                    <td>$4,000 - $6,000+</td>
+                    <td>$1,200 - $2,000</td>
+                    <td>65-70%</td>
+                    <td>Laser vision correction for nearsightedness, farsightedness, and astigmatism.</td>
+                </tr>
+                <tr>
+                    <td>PRK (Photorefractive Keratectomy)</td>
+                    <td>$4,500 - $6,500+</td>
+                    <td>$1,500 - $2,200</td>
+                    <td>65-70%</td>
+                    <td>Alternative to LASIK for patients with thin corneas.</td>
+                </tr>
+                <tr>
+                    <td>Cataract Surgery (Per Eye)</td>
+                    <td>$5,000 - $8,000+</td>
+                    <td>$1,500 - $2,500</td>
+                    <td>65-70%</td>
+                    <td>Includes standard monofocal lens implant.</td>
+                </tr>
+                <tr>
+                    <td>Premium Cataract Surgery (Multifocal Lens)</td>
+                    <td>$8,000 - $12,000+</td>
+                    <td>$2,500 - $4,000</td>
+                    <td>65-70%</td>
+                    <td>Advanced lenses to correct both distance and near vision.</td>
+                </tr>
+                <tr>
+                    <td>Glaucoma Surgery (Trabeculectomy)</td>
+                    <td>$12,000 - $20,000+</td>
+                    <td>$3,500 - $6,000</td>
+                    <td>65-70%</td>
+                    <td>Procedure to reduce intraocular pressure and prevent vision loss.</td>
+                </tr>
+                <tr>
+                    <td>Retinal Detachment Repair</td>
+                    <td>$15,000 - $25,000+</td>
+                    <td>$4,500 - $7,500</td>
+                    <td>65-70%</td>
+                    <td>Vitrectomy or scleral buckle procedure for retinal reattachment.</td>
+                </tr>
+                <tr>
+                    <td>Corneal Transplant (Keratoplasty)</td>
+                    <td>$20,000 - $30,000+</td>
+                    <td>$6,000 - $10,000</td>
+                    <td>65-70%</td>
+                    <td>Partial or full thickness corneal transplantation.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="treatment">
+    <div class="treatment-header">
+        <h3>Microsurgery</h3>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="treatment-content">
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Treatment</th>
+                    <th>USA</th>
+                    <th>Turkey</th>
+                    <th>Savings</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lymphaticovenular Anastomosis (LVA)</td>
+                    <td>$25,000 - $45,000+</td>
+                    <td>$8,000 - $14,000</td>
+                    <td>65-70%</td>
+                    <td>For lymphedema treatment, connecting lymphatic vessels to tiny veins.</td>
+                </tr>
+                <tr>
+                    <td>Digital Replantation</td>
+                    <td>$40,000 - $75,000+</td>
+                    <td>$12,000 - $20,000</td>
+                    <td>65-70%</td>
+                    <td>Reattaching severed fingers or toes using microvascular techniques.</td>
+                </tr>
+                <tr>
+                    <td>Free Tissue Transfer (Flap Reconstruction)</td>
+                    <td>$60,000 - $120,000+</td>
+                    <td>$18,000 - $30,000</td>
+                    <td>65-70%</td>
+                    <td>Transferring tissue with its blood supply for complex reconstructions.</td>
+                </tr>
+                <tr>
+                    <td>Nerve Repair & Grafting</td>
+                    <td>$30,000 - $55,000+</td>
+                    <td>$10,000 - $17,000</td>
+                    <td>65-70%</td>
+                    <td>Microsurgical repair of peripheral nerves using grafts if needed.</td>
+                </tr>
+                <tr>
+                    <td>Vasectomy Reversal</td>
+                    <td>$15,000 - $25,000+</td>
+                    <td>$5,000 - $8,500</td>
+                    <td>65-70%</td>
+                    <td>Reconnecting vas deferens using microscopic techniques.</td>
+                </tr>
+                <tr>
+                    <td>Fallopian Tube Reanastomosis</td>
+                    <td>$20,000 - $35,000+</td>
+                    <td>$7,000 - $12,000</td>
+                    <td>65-70%</td>
+                    <td>Reversing tubal ligation to restore fertility.</td>
+                </tr>
+                <tr>
+                    <td>Microsurgical Varicocelectomy</td>
+                    <td>$18,000 - $30,000+</td>
+                    <td>$6,000 - $10,000</td>
+                    <td>65-70%</td>
+                    <td>Treatment for varicose veins in scrotum that may affect fertility.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
         </div>
     </section>
 
@@ -1881,7 +3012,7 @@ max-width:900px;margin:0 auto;padding: 0;
     <footer>
         <div class="container">
 
-            <p style="color: var(--dark); font-size: 12px; font-weight: lighter;">Medstar Consulting has been established with the aim of connecting patients from North America to trusted and skilled physicians at world standard medical facilities in Turkey. We do not charge anyone for the information we provide and do not get involved in any monetary transaction. Please keep in mind that WE ARE NOT A MEDICAL FACILITY, and do not provide medical treatment or advice. The content of our website is only aimed on the purpose of informing guests. The information provided in our website, can not replace any doctors treatment and consultation.
+            <p style="color: var(--dark); font-size: 12px; font-weight: lighter;">In affiliation with the Canada-based Turkish Health Tourism Association of North America (THTANA), we establish close partnerships with leading health facilities accredited by the Joint Commission International (JCI) and renowned medical professionals in Turkey. Throughout your stay in Turkey, we offer comprehensive support to ensure a seamless and efficient treatment experience.<br><br>Medstar Consulting has been established with the aim of connecting patients from North America to trusted and skilled physicians at world standard medical facilities in Turkey. We do not charge anyone for the information we provide and do not get involved in any monetary transaction. Please keep in mind that WE ARE NOT A MEDICAL FACILITY, and do not provide medical treatment or advice. The content of our website is only aimed on the purpose of informing guests. The information provided in our website, can not replace any doctors treatment and consultation.
             </p>
             </div>
         </div>
