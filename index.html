@@ -305,125 +305,10 @@ nav ul {
         
 
         
-        /* Providers Section */
-        .providers {
-            background-color: white;
-            padding: 80px 0;
-            position: relative;
-        }
-        
-        .providers-container {
-            position: relative;
-            margin: 0 auto;
-        }
-        
-        .providers-scroll {
-            display: flex;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            gap: 25px;
-            padding: 30px 10px;
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* IE/Edge */
-            -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
-        }
-        
-        .providers-scroll::-webkit-scrollbar {
-            display: none; /* Chrome, Safari, Opera */
-        }
-        
-        .slider-controls {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 25px;
-        }
-        
-        .slider-btn {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: var(--primary);
-            color: white;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            transition: all 0.3s;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-        }
-        
-        .slider-btn:hover {
-            background: var(--secondary);
-            transform: scale(1.05);
-        }
-
-        .provider-card {
-            flex: 0 0 400px;
-            background-color: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-        }
-        
-        .provider-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .provider-img {
-            height: 180px;
-            background: linear-gradient(135deg, #2a5bd7 0%, #0f2e6f 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2.5rem;
-        }
-        
-        .provider-info {
-            padding: 25px;
-            text-align: center;
-        }
-        
-        .provider-info h3 {
-            font-size: 1.4rem;
-            margin-bottom: 12px;
-            color: #0f2e6f;
-        }
-        
-        .provider-info p {
-            color: #6c757d;
-            line-height: 1.6;
-        }
-        
-        .provider-specialties {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 15px;
-        }
-        
-        .specialty-tag {
-            background-color: #e8f0fe;
-            color: #2a5bd7;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-        
         /* Responsive adjustments */
         @media (max-width: 768px) {
 
 
-            .provider-card {
-                flex: 0 0 280px;
-            }
 
 
             .logo-text {
@@ -432,54 +317,12 @@ nav ul {
                 color: var(--primary);
             }
 
-            
-            .provider-img {
-                height: 180px;
-            }
+       
             
 
         }
         
-        @media (max-width: 480px) {
-            .provider-card {
-                flex: 0 0 260px;
-            }
-            .provider-img {
-                height: 160px;
-                font-size: 2.5rem;
-            }
-        }
-
-
         
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-
-            .hero-image      { display: none; }
-            .why-us          { padding-bottom: 80px; }
-
-            .doctor-card {
-                flex: 0 0 280px;
-            }
-            
-            .doctor-img {
-                height: 180px;
-            }
-            
-        }
-        
-        @media (max-width: 480px) {
-
-
-            .doctor-card {
-                flex: 0 0 260px;
-            }
-            
-            .doctor-img {
-                height: 160px;
-                font-size: 2.5rem;
-            }
-        }
 
 
         
@@ -775,32 +618,13 @@ nav ul {
     }
 }
 
- @media (max-width: 992px) {
-            
-            .hero-image {
-                height: 35%;
-            }
-        }
         
-        @media (max-width: 768px) {
-
-
-            
-            .hero-image {
-                height: 30%;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
-            }
-        }
         
         @media (max-width: 576px) {
             .hero p {
                 font-size: 1rem;
             }
             
-            .hero-image {
-                height: 25%;
-            }
         }
 
         .gradient-text {
@@ -858,7 +682,7 @@ max-width:950px;margin:0 auto;padding: 0;
     right: 20px;
     height: 34px;
     background: var(--light);          /* same grey as wrapper */
-    border-radius: 20px;          /* pill shape */
+    border-radius: 30px;          /* pill shape */
     display: flex;
     align-items: center;
     padding: 0 46px 0 16px;       /* room for the button on the right */
@@ -920,57 +744,79 @@ max-width:950px;margin:0 auto;padding: 0;
 .why-turkey-wrapper.show .why-turkey-content{opacity:1;pointer-events:auto}
 
 
-/* ----------  FAQ accordion (clone of treatments) ---------- */
+/* FAQ accordion (updated for smooth animation) */
+        .faq { background-color: var(--light); }
+        .faq-container { max-width: 950px; margin: 0 auto; }
+        .faq-item { overflow: hidden; }
+        .faq-header {
+            -webkit-user-select: none;
+            user-select: none;
+            padding: 20px 0;
+            border-top: 1px solid #ddd;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-item:first-child .faq-header { border-top: none; }
+        .faq-header h3 {
+            font-weight: 500;
+            font-size: 1.2rem;
+            color: var(--secondary);
+        }
+        .faq-content {
+            width: 100%;
+            max-height: 0;
+            transition: max-height 0.35s ease-in-out, padding 0.35s ease-in-out; 
+            padding: 0 20px;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow: hidden;
+        }
+        .faq-item.active .faq-content {
+            max-height: 60rem;
+            padding: 0 20px 20px;
+        }
 
-.faq { background-color: var(--light); overflow-y: auto;          /* key line */
-    -webkit-overflow-scrolling: touch; }
-.faq-container { max-width: 950px; margin: 0 auto; }
-.faq-item { overflow: hidden; }
-.faq-header {
-    -webkit-user-select: none;
-    user-select: none;
-    padding: 20px 0;
-    border-top: 1px solid #ddd;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.faq-item:first-child .faq-header { border-top: none; }
-.faq-header h3 {
-    font-weight: 500;
-    font-size: 1.2rem;
-    color: var(--secondary);
-}
-.faq-content {
-    width: 100%;
-    max-height: 0;
-    transition: .35s ease-in-out;
-    padding: 0 20px;
-    color: var(--dark);
-    line-height: 1.6;
-}
-.faq-item.active .faq-content {
-    
-    max-height: 300px;          /* enough for a paragraph */
-    padding: 0 20px 20px;
-}
-
-.faq-extra {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .35s ease;   /* same speed as your closing */
-}
-.faq-extra.show {
-        border-top: 1px solid #ddd;
-
-    max-height: 600px;   /* ← plenty for the content, but not huge */
+        .faq-item:not(.active) .faq-content {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
-section.faq {
-    padding-bottom: 0 !important;
+        .faq-extra {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease-in-out, padding-top .35s ease-in-out,
+                padding-bottom .35s ease-in-out;
+            border-top: 1px solid #ddd;
+        }
+        .faq-extra.show {
+            max-height: 200rem;
+        }
+
+        .faq-extra:not(.show) {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
+        section.faq {
+            padding-bottom: 0 !important;
+        }
+
+/* ----------  calm tag-cloud  ---------- */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:.6rem 1rem;justify-content:center}
+.tag-cloud a{
+  padding:.35rem .85rem .3rem;
+  font-size:clamp(.85rem,1.1vw,1rem);
+  font-weight:500;
+  color:var(--dark);
+  background:rgba(0,0,0,.04);
+  border:1px solid rgba(0,0,0,.12);
+  border-radius:50px;
+  text-decoration:none;
+  transition:background .25s, color .25s
+}
+.tag-cloud a:hover{color: var(--gray);text-decoration:none}
 
 </style>
 </head>
@@ -1241,14 +1087,35 @@ section.faq {
                 </div>
             </div>
                                 <div style="text-align: center; margin-top: 40px;">
-                                    <a href="#contact"><button class="btn">Contact us</button>
-</a>
+                                    <a href="#contact"><button class="btn">Contact us</button></a>
             </div>
 
             
         </div>
     </section>
 
+    <!-- =====  OUR PARTNER HOSPITALS  ===== -->
+<!-- =====  PARTNER TAG-CLOUD  ===== -->
+<section class="partners" id="partners" style="padding-bottom: 0;">
+  <div class="container">
+    <div class="section-title">
+      <h2>Partner hospitals.</h2>
+                <p>Some of our most popular JCI-accredited facilities we work with.</p>
+    </div>
+<div class="tag-cloud">
+  <a href="https://memorialhospitalsgroup.com/hospitals/bahcelievler" target="_blank" rel="noopener">Memorial Hospitals</a>
+  <a href="https://acibademinternational.com" target="_blank" rel="noopener">Acıbadem Healthcare Group</a>
+  <a href="https://www.medicalparkinternational.com/medical-park-antalya-140" target="_blank" rel="noopener">Medical Park Antalya</a>
+  <a href="https://www.dunyagoz.com/en/" target="_blank" rel="noopener">Dünyagöz Hospitals</a>
+  <a href="https://www.memorial.com.tr/en/hospitals/medstar-antalya" target="_blank" rel="noopener">Medstar Antalya</a>
+  <a href="https://www.okanhealthcare.com" target="_blank" rel="noopener">Okan University</a>
+  <a href="https://www.medicanainternational.com/en" target="_blank" rel="noopener">Medicana Health Group</a>
+  <a href="https://dentakay.com" target="_blank" rel="noopener">Dentakay Istanbul</a>
+    <a href="https://kolanhastanesi.com.tr/en/istanbul-health-and-technology-university-sisli-kolan-international/" target="_blank" rel="noopener">Istanbul Kolan</a>
+
+</div>
+  </div>
+</section>
 
     <!-- Treatments Section -->
     <section class="treatments" id="treatments">
@@ -1600,7 +1467,7 @@ section.faq {
                 </tr>
                 <tr>
                     <td>Lung Transplant</td>
-                    <td>$1,000,000 - $1,500,000+</td>
+                    <td>$1,000 - $1,500,000+</td>
                     <td>$180,000 - $280,000</td>
                     <td>75-85%</td>
                     <td>Single or double lung transplant with specialized surgical team.</td>
@@ -2178,7 +2045,7 @@ section.faq {
                     <td>$60,000 - $100,000+</td>
                     <td>$15,000 - $25,000</td>
                     <td>75-80%</td>
-                    <td>Upscale facilities with alternative therapies and private accommodations.</td>
+                    <td>Uscale facilities with alternative therapies and private accommodations.</td>
                 </tr>
                 <tr>
                     <td>Medication-Assisted Treatment (12 months)</td>
@@ -2500,7 +2367,7 @@ section.faq {
             </thead>
             <tbody>
                 <tr>
-                    <td>Gastric Sleeve Surgery</td>
+                    <td>Gastric Sleeze Surgery</td>
                     <td>$15,000 - $25,000+</td>
                     <td>$4,500 - $7,500</td>
                     <td>70-75%</td>
@@ -2844,7 +2711,7 @@ We provide peace of mind, ensuring your focus remains on your health and recover
                             <textarea id="message" placeholder="Please describe your medical needs or questions..." rows="10"></textarea>
                         </div>
                         
-                        <button class="btn">Submit</button>
+                        <button type="submit" class="btn">Submit</button>
             </div>
         </div>
     </section>
@@ -2931,6 +2798,24 @@ We provide peace of mind, ensuring your focus remains on your health and recover
                 });
             });
             
+            // FAQ Accordion
+            const faqHeaders = document.querySelectorAll('.faq-header');
+            faqHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const faqItem = header.parentElement;
+                    faqItem.classList.toggle('active');
+                    
+                    const icon = header.querySelector('i');
+                    if (faqItem.classList.contains('active')) {
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
+                    } else {
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    }
+                });
+            });
+            
             // Scroll Animation for Process Steps
             const processSteps = document.querySelectorAll('.process-step');
             
@@ -2969,20 +2854,6 @@ We provide peace of mind, ensuring your focus remains on your health and recover
                 }
             });
             
-            /* ===== FAQ accordion (clone of treatments) ===== */
-        document.querySelectorAll('.faq-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const item = header.parentElement;
-                item.classList.toggle('active');
-
-                const icon = header.querySelector('i');
-                icon.classList.toggle('fa-chevron-down');
-                icon.classList.toggle('fa-chevron-up');
-            });
-        });
-
-
-            
         });
 
 
@@ -3014,10 +2885,16 @@ if (expandBtn && extraFaq) {
         const willShow = !extraFaq.classList.contains('show');
         extraFaq.classList.toggle('show');
 
-        // label
-        expandBtn.childNodes[0].textContent = willShow ? 'Collapse' : 'More ';
-        // icon only when “Expand”
-        icon.style.display = willShow ? 'none' : 'inline-block';
+        // Toggle the icon
+        if (willShow) {
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-up');
+            expandBtn.childNodes[0].textContent = 'Less ';
+        } else {
+            icon.classList.remove('fa-chevron-up');
+            icon.classList.add('fa-chevron-down');
+            expandBtn.childNodes[0].textContent = 'More ';
+        }
     });
 }
 </script>
