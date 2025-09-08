@@ -2732,6 +2732,8 @@ We provide peace of mind, ensuring your focus remains on your health and recover
                     <div class="form-group">
                         <textarea name="message" id="message" placeholder="Please describe your medical needs..." rows="10" required></textarea>
                     </div>
+                    <input type="hidden" name="_subject" value="New MedStar inquiry">
+        <input type="hidden" name="_next" value="https://andreacarpini.github.io/thanks.html">
                     <button type="submit" class="btn">Submit</button>
                 </form>
             </div>
@@ -2908,7 +2910,12 @@ if (expandBtn && extraFaq) {
             expandBtn.childNodes[0].textContent = 'More ';
         }
     });
+
+    
 }
+
+ // optional: wipe form if user returns via Back button
+  window.addEventListener('pageshow', () => document.getElementById('appointmentForm')?.reset());
 </script>
 </body>
 </html>
